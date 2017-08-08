@@ -1,0 +1,26 @@
+Source: libfuse3
+Priority: optional
+Maintainer: Bartek Kryza <bkryza@gmail.com>
+Build-Depends: debhelper (>=9),autotools-dev
+Standards-Version: 3.9.7
+Section: libs
+Homepage: https://github.com/libfuse/libfuse
+
+Package: libfuse3-dev
+Section: libdevel
+Architecture: any
+Depends: libfuse3,pkg-config
+Description: Filesystem in Userspace (library)
+ Filesystem in Userspace (FUSE) is a simple interface for userspace programs to
+ export a virtual filesystem to the Linux kernel. It also aims to provide a
+ secure method for non privileged users to create and mount their own filesystem
+ implementations.
+
+Package: libfuse3
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Filesystem in Userspace (library)
+ Filesystem in Userspace (FUSE) is a simple interface for userspace programs to
+ export a virtual filesystem to the Linux kernel. It also aims to provide a
+ secure method for non privileged users to create and mount their own filesystem
+ implementations.
