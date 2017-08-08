@@ -21,10 +21,16 @@ tar zxvf fuse-3.1.1.tar.gz
 
 cd fuse-3.1.1
 
-ln -s ../xenial/debian debian
+# Copy (symbolic link won't work...)
+cp ../xenial/debian debian
 
 # If necessary update changelog
 dch -i
+
+# Create orig source file
+export DEBFULLNAME="Bartek Kryza"
+export DEBEMAIL="bkryza@gmail.com"
+dh_make -e bkryza@gmail.com -p libfuse3 -c gpl2 -l --f ../fuse-3.1.1.tar.gz
 
 # Build packages
 dpkg-buildpackage -rfakeroot
