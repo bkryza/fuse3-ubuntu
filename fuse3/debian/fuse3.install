@@ -1,2 +1,1 @@
-debian/fuse.conf => /etc
-debian/copyright => /usr/doc/fuse3
+debian/copyright => /usr/doc/fuse3/

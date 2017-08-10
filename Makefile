@@ -2,7 +2,7 @@ FUSE_RELEASE ?= 3.1.1
 REBUILD      ?= 3
 MAINTAINER   ?= bkryza@gmail.com
 
-DISTS = trusty wily xenial zesty
+DISTS = trusty wily xenial
 
 all: $(DISTS)
 

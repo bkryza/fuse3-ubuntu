@@ -11,9 +11,14 @@ case "${1}" in
 
 		# Drop this hunk in 16.10, "upgrade" permissions to new defaults 0600 -> 0644
 		if dpkg --compare-versions "$2" lt-nl "2.9.4-1ubuntu2~"; then
-		    if ! dpkg-statoverride --list /etc/fuse.conf >/dev/null 2>&1; then
-			chmod 0644 /etc/fuse.conf
+		    if ! dpkg-statoverride --list /etc/fuse3.conf >/dev/null 2>&1; then
+			chmod 0644 /etc/fuse3.conf
 		    fi
+		fi
+
+		if [ ! -e /etc/fuse.conf ]
+		then
+			ln -s /etc/fuse3.conf /etc/fuse.conf
 		fi
 
 		if [ -x /usr/sbin/update-initramfs ]

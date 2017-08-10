@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: libfuse3
+Upstream-Name: fuse3
 Source: https://github.com/libfuse/libfuse
 
 Files: *

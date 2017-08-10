@@ -11,7 +11,7 @@ case "${1}" in
 		;;
 
 	purge)
-		rm -f /etc/fuse.conf
+		rm -f /etc/fuse3.conf
 		;;
 
 	upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
