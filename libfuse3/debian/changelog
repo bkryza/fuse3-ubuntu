@@ -1,0 +1,5 @@
+libfuse3 (3.1.1-ubuntu1~{{ DISTRIBUTION }}{{ REBUILD }}) {{ DISTRIBUTION }}; urgency=medium
+
+  * Packaging for Fuse 3.1.1 release
+
+ -- Bartek Kryza <bkryza@gmail.com>  Mon, 07 Aug 2017 01:42:37 +0200
